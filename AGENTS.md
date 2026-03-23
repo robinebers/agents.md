@@ -1,26 +1,23 @@
 # AGENTS.md
 
-Version: 0.27 (2026-03-17)
+Version: 0.28 (2026-03-23)
 
 Work style: Be radically precise. No fluff. Pure information only (drop grammar; min tokens).
 
 ## Agent Protocol
-- “Make a note” => edit AGENTS.md (Ignore `CLAUDE.md`, symlink for AGENTS.md).
-- "Remember" (or similar) -> edit AGENTS.md under "User Notes"
-- Editor: `cursor <path>`.
-- New deps: quick health check (recent releases/commits, adoption).
+- Editor: `cursor <path>`
 - When asked to update the `AGENTS.md` to the latest version:
-  1. Fetch `https://raw.githubusercontent.com/robinebers/agents.md/main/AGENTS.md`.
-  2. Check if newer version version and merge without losing local changes.
+  1. Fetch `https://raw.githubusercontent.com/robinebers/agents.md/main/AGENTS.md`
+  2. Check if newer version version and merge without losing local changes
 
 ## Guardrails
-- Use `trash` for deletes.
-- Use `mv` / `cp` to move and copy files.
-- Bugs: add regression test when it fits.
-- Keep files <~400 LOC; split/refactor as needed.
-- Simplicity first: handle only important cases; no enterprise over-engineering/fallbacks.
-- New functionality: small OR absolutely necessary.
-- NEVER delete files, folders or other data unless explicilty approved or part of a plan.
+- Use `trash` for deletes
+- Use `mv` / `cp` to move and copy files
+- Bugs: add regression test when it fits
+- Keep files <~400 LOC; split/refactor as needed
+- Simplicity first: handle only important cases; no enterprise over-engineering/fallbacks
+- New functionality: small OR absolutely necessary
+- NEVER delete files, folders or other data unless explicilty approved or part of a plan
 - Before writing code, stricly follow the below research rules
 
 ## Research
@@ -37,11 +34,7 @@ Work style: Be radically precise. No fluff. Pure information only (drop grammar;
 - Safe by default: `git status/diff/log`. Push only when user asks.
 - `git checkout` ok for PR review / explicit request.
 - Branch changes require user consent.
-- Destructive ops forbidden unless explicit (`reset --hard`, `clean`, `restore`, `rm`, …).
-- No repo-wide S/R scripts; keep edits small/reviewable.
-- Avoid manual `git stash`; if Git auto-stashes during pull/rebase, that’s fine (hint, not hard guardrail).
-- If user types a command (“pull and push”), that’s consent for that command.
-- Big review: `git --no-pager diff --color=never`.
+- Destructive ops forbidden unless explicit (`reset --hard`, `clean`, `restore`, `rm`, `DROP`, `DELETE FROM`, …).
 
 ## Error Handling
 - Expected issues: explicit result types (not throw/try/catch).
@@ -50,19 +43,19 @@ Work style: Be radically precise. No fluff. Pure information only (drop grammar;
 - Unexpected issues: fail LOUD (throw/console.error + toast.error); NEVER add fallbacks.
 
 ## Backwards Compat
-- Always minimum only, you typically overthink this. Keep things simple.
-- When in doubt, ask the user before you overengineer solutions.
+- Always minimum only, you typically overthink this -> KEEP THINGS SIMPLE!
+- When in doubt, ask the user before you overengineer solutions
 
 ## Critical Thinking
-- Fix root cause (not band-aid).
+- Fix root cause (not band-aid)
 - Unsure: read more code; if still stuck, ask w/ short options (A/B/C).
 - Conflicts: stop. call out; pick safer path.
 - Unrecognized changes: assume other agent; keep going; focus your changes. If it causes issues, stop + ask user.
 
-## Completion and Autonomy Gate
-- Assume "continue" unless the user explicitly says "stop" or "pause".
-- Do not ask "should I continue?" or similar questions.
-- If more progress is possible without user input, continue.
+## Granted Autonomy
+- Assume "continue" unless the user explicitly says "stop" or "pause"
+- Do not ask "should I continue?" or similar questions
+- If more progress is possible without user input, continue
 - BEFORE you end a turn or ask the user a question, run this checklist
 -- Answer these privately, then act:
    1) Was the initial task fully completed?
