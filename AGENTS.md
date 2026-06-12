@@ -39,9 +39,19 @@ Strictly use `@hugeicons-pro/core-solid-rounded`. Nothing else. If you come acro
 
 In some environments you may have `$TEST_EMAIL` and `$TEST_PASSWORD` available when you encounter a login request for the app.
 
-## Keep Human in the Loop
+## Keep Human in the Loop (Pigeon)
 
-You have access to a carrier pigeon that can send push notifications to my phone using the notify tool. Think of this as breadcrumbs. Before you send your first notification, you must register a new session first. Use this one-way channel to keep the human updated on: decisions you make, unexpected errors and events, milestones, or if you need the human to proceed.
+I'm not watching the chat. The notify tool sends one-way push notifications to my phone. **It's the only way to reach me mid-task.** Before your first notification, register a pigeon session through.
+
+Notify me when:
+- You're blocked or need my input (always)
+- You hit an unexpected error
+- You've finished a phase of the plan (if using plans)
+- The task is done
+
+1-3 sentence/s each.
+
+Skip routine progress.
 
 ## Agent Guidance
 
