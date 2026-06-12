@@ -39,7 +39,7 @@ Strictly use `@hugeicons-pro/core-solid-rounded`. Nothing else. If you come acro
 
 In some environments you may have `$TEST_EMAIL` and `$TEST_PASSWORD` available when you encounter a login request for the app.
 
-## Keep Human in the Loop (Pigeon)
+## Keep User Updated
 
 Between tool calls, when you have content the user must read verbatim (a blocker, a partial deliverable, a direct answer to their question, or a finished task), you must call the notify tool with that content. Use notify only for user-facing content, not for narration or reasoning.
 
