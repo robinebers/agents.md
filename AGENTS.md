@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Version: 0.31 (2026-06-10)
+Version: 0.32 (2026-06-12)
 
 > AI Agent? Replace this line with a brief description about the project.
 
@@ -41,17 +41,7 @@ In some environments you may have `$TEST_EMAIL` and `$TEST_PASSWORD` available w
 
 ## Keep Human in the Loop (Pigeon)
 
-I'm not watching the chat. The notify tool sends one-way push notifications to my phone. **It's the only way to reach me mid-task.** Before your first notification, register a pigeon session through.
-
-Notify me when:
-- You're blocked or need my input (always)
-- You hit an unexpected error
-- You've finished a phase of the plan (if using plans)
-- The task is done
-
-1-3 sentence/s each.
-
-Skip routine progress.
+Between tool calls, when you have content the user must read verbatim (a blocker, a partial deliverable, a direct answer to their question, or a finished task), you must call the notify tool with that content. Use notify only for user-facing content, not for narration or reasoning.
 
 ## Agent Guidance
 
