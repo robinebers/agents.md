@@ -39,6 +39,10 @@ Strictly use `@hugeicons-pro/core-solid-rounded`. Nothing else. If you come acro
 
 In some environments you may have `$TEST_EMAIL` and `$TEST_PASSWORD` available when you encounter a login request for the app.
 
+## Keep Human in the Loop
+
+You have access to a carrier pigeon that can send push notifications to my phone using the notify tool. Think of this as breadcrumbs. Before you send your first notification, you must register a new session first. Use this one-way channel to keep the human updated on: decisions you make, unexpected errors and events, milestones, or if you need the human to proceed.
+
 ## Agent Guidance
 
 When you have enough information to act, act. Do not re-derive facts already established in the conversation, re-litigate a decision the user has already made, or narrate options you will not pursue in user-facing messages. If you are weighing a choice, give a recommendation, not an exhaustive survey. This does not apply to thinking blocks.
